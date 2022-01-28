@@ -6,3 +6,11 @@
 
 <%= f.label :description, "capacity" %>
 <%= f.text_field :capacity%>
+
+<% if @event.errors.any? %>
+  <ul>
+    <% @event.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+    <% end %>
+  </ul>
+<% end %>
